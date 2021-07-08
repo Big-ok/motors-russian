@@ -10,7 +10,7 @@
 
   text-align: center;
 
-  background-color: rgba(102, 153, 204, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
   visibility: hidden;
   opacity: 0;
 
@@ -48,8 +48,8 @@
   border: 3px solid #d12a4a;
   border-radius: 6px;
   outline: medium none;
-  -webkit-box-shadow: 3px 3px 15px #bbbbbb;
-  box-shadow: 3px 3px 15px #bbbbbb;
+  -webkit-box-shadow: 0 0 8px #bbbbbb;
+  box-shadow: 0 0 8px #bbbbbb;
 }
 .popup__close {
   position: absolute;

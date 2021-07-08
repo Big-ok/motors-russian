@@ -1,166 +1,3 @@
-// "use strict"
-
-
-
-// document.addEventListener('DOMContentLoaded', function() {
-
-
-//     const form = document.getElementById('form');
-
-//     console.log('form 1 =>');
-//     form.addEventListener('submit', formSend);
-
-//     // console.log('submit =>', formSend());
-
-//     async function formSend(e) {
-//         e.preventDefault();
-
-//         let error = await formValidate(form);
-//         console.log('error 1 =>', formValidate(form));
-//         return error;
-
-
-//     }
-
-
-
-//     function formValidate(form) {
-//         let error = 0;
-//         let formReq = document.querySelectorAll('.validate');
-
-//         for (let index = 0; index < formReq.length; index++) {
-//             const input = formReq[index];
-//             formRemoveError(input);
-
-//             console.log('input=>', input);
-//             console.log('error 2 =>', error);
-//             // if (input.classList.contains('name')){
-
-//             // }
-//             if (input.getAttribute('type') === 'checkbox' && input.checked === false) {
-//                 formAddError(input);
-//                 console.log('input2 =>', input);
-//                 error++;
-//                 console.log('error2 =>', error);
-//             } else {
-//                 if (input.value === '') {
-//                     formAddError(input);
-//                     console.log('input3 =>', input);
-//                     error++;
-//                     console.log('error3 =>', error);
-//                 }
-//             }
-//         }
-
-//     }
-
-//     function formAddError(input) {
-//         input.parentElement.classList.add('_error');
-//         input.classList.add('_error');
-//     }
-
-//     function formRemoveError(input) {
-//         input.parentElement.classList.remove('_error');
-//         input.classList.remove('_error');
-//     }
-// });
-
-// =======================================
-
-// console.log('TEST Send 1');
-
-// const send = document.querySelector("#send");
-
-// console.log('TEST Send 1 =>', send);
-
-// send.addEventListener("click", () => {
-//     console.log('TEST Send 2 =>', send);
-//     // fetch('https://raw.githubusercontent.com/belocer/belocer.github.io/blob/master/js/app.js')
-//     //          .then(response => {
-//     //             if (response.status >= 400) {
-//     //             return Promise.reject();
-//     //          }
-//     //             return response.json();
-//     //          })
-//     //          .then(i => console.log(i))
-//     //          .catch(() => console.log('ошибка'))
-// });
-
-
-// var el = document.getElementById("send2");
-// el.addEventListener("click", () => {
-
-//     fetch('https://api.telegram.org/bot1834273371:AAHGdWu4-XT872rmGx6P3fxCXRhrByCY_RI/sendMessage?chat_id=-521722614&text=Проверка связи')
-//         .then(response => {
-//             if (response.status >= 400) {
-//                 return Promise.reject();
-//             }
-//             return response.json();
-//         })
-//         .then(i => console.log(i))
-//         .catch(() => console.log('ошибка'))
-
-// }, false);
-
-// ===========================================
-
-// // inputMask
-// let inputs = document.querySelectorAll('input[type="tel"]');
-// let im = new Inputmask('+7 (999) 999-99-99');
-// im.mask(inputs);
-
-// // validate
-
-// function validateForms(selector, rules) {
-//     new window.JustValidate(selector, {
-//         rules: rules,
-//         submitHandler: function (form, values, ajax) {
-//             console.log(form);
-
-//             let formData = new FormData(form);
-
-//             fetch("mail.php", {
-//                 method: "POST",
-//                 body: formData
-//             })
-//             .then(function(data) {
-//                 console.log(data);
-//                 console.log('Отправлено');
-//                 form.reset();
-//             });
-//         }
-//     });
-// }
-
-// validateForms('.form', { email: { required: true, email: true }, name: { required: true }, message: { required: true } });
-
-// ==================================
-
-// ====
-// const send = document.querySelector('#send');
-//     send.addEventListener('click', () => {
-//         let name = document.querySelector('#name').value;
-
-//             if (input.value === '') {
-//                 formAddError(input);
-//                 console.log('input3 =>', input);
-//                 error++;
-//                 console.log('error3 =>', error);
-//             }
-
-//         fetch('https://api.telegram.org/bot1834273371:AAHGdWu4-XT872rmGx6P3fxCXRhrByCY_RI/sendMessage?chat_id=-521722614&text='+name+'')
-//             .then(response => {
-//                 if (response.status >= 400) {
-//                     return Promise.reject();
-//                 }
-//                 return response.json();
-//             })
-//             .then(i => console.log(i))
-//             .catch(() => console.log('ошибка'))
-
-//     }, false);
-// ====
-
 
 document.addEventListener("DOMContentLoaded", function() {
     [].forEach.call(document.querySelectorAll('.tel'), function(input) {
@@ -196,6 +33,15 @@ document.addEventListener("DOMContentLoaded", function() {
         input.addEventListener("blur", mask, false);
         input.addEventListener("keydown", mask, false)
 
+        input.addEventListener('click', () => {
+            if (input.setSelectionRange) {
+                const length = input.value.length * 2;
+                setTimeout(() => {
+                    input.setSelectionRange(length, length);
+                }, 1);
+            }
+        });
+
     });
 
 });
@@ -222,7 +68,7 @@ form.addEventListener('submit', (e) => { // Отлавливаем событи�
             }
             if (formElements[i].type === 'checkbox' && formElements[i].checked === false) { // Проверяем заполнено ли поле checkbox
                 formElements[i].parentElement.classList.add('error'); // Добавляем родителю класс error
-                formElements[i].parentElement.insertAdjacentHTML('afterbegin', '<span>&nbsp;</span>');
+                // formElements[i].parentElement.insertAdjacentHTML('afterbegin', '<span>&nbsp;</span>');
                 formElements[i].parentElement.insertAdjacentHTML('beforeend', '<span class="helper-text helper-checked">Вы должны согласится с условиями политики сайта, чтобы отправить форму</span>');
             } else if (formElements[i].value === '') { // Проверяем заполнено поле input
                 formElements[i].parentElement.classList.add('error'); // Добавляем родителю класс error

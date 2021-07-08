@@ -147,6 +147,18 @@
   top: -100px;
 }
 
+@media screen and (min-width: 350px) {
+  .form .helper-checked {
+    top: -80px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .form .helper-checked {
+    top: -40px;
+  }
+}
+
 .form
   .error
   input:not([type='checkbox']):not(:placeholder-shown)
