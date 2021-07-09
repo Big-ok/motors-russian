@@ -90,7 +90,7 @@ form.addEventListener('submit', (e) => { // Отлавливаем событи�
         form.style.display = "none";
         form.insertAdjacentHTML('beforebegin', '<div class="preloader-wrapper big active"><div class="spinner-layer spinner-blue-only"><div class="circle-clipper left"><div class="circle"></div></div><div class="gap-patch"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div>');
 
-        fetch('https://api.telegram.org/bot1834273371:AAHGdWu4-XT872rmGx6P3fxCXRhrByCY_RI/sendMessage?chat_id=-521722614&text=Сообщение с сайта: ' + hostname + ', от пользователя: ' + name + ', тел: ' + tel)
+        fetch('https://api.telegram.org/bot1801012612:AAHl0LxzdBxyCtpQSVmVmGQ3T4dqHhAx49U/sendMessage?chat_id=-546947868&text=Сообщение с сайта: ' + hostname + ', от пользователя: ' + name + ', тел: ' + tel)
 
             .then(response => {
                 if (response.status >= 400) {

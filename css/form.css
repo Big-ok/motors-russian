@@ -257,6 +257,11 @@ button {
   bottom: auto !important;
 }
 
+button, 
+button:active, 
+button:focus {
+    outline: none;
+}
 /**/
 
 /**
