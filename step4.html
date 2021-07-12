@@ -27,7 +27,7 @@
 	<base href="https://motors-russia.com/">
 </head>
 
-<body class="page page-id-28 page-template page-template-page-step2 page-template-page-step2-php">
+<body class="single single-product postid-52">
 	<header class="scene_element scene_element--fadein">
 		<div class="head_cnt">
 	
@@ -65,34 +65,9 @@
 		</div>
 	  </header>
 	<div class="mmm-menu"></div>
-	<script type="text/javascript" src="js/cookies.js"></script>
-	<script type="text/javascript">
-		jQuery(document).ready(function ($) {
-
-			var width = $(window).width();
-			if (width > 480) {
-				if ($.cookie("step2") == null) {
-					$('.marks_block a:nth-of-type(2)').css('z-index', '10000');
-					$('.marks_block a').eq(1).addClass('rightmark').prepend('<div class="myglow"></div>');
-					$('#overlay').fadeIn();
-					$.cookie("step2", "itsshown", {
-						path: '/'
-					});
-				}
-
-				$('#overlay').on('click', function () {
-					$('.marks_block a:nth-of-type(2).rightmark:after').fadeOut();
-					$('.myglow').fadeOut();
-					$('.marks_block a').eq(1).removeClass('rightmark').css('z-index', '10');
-					$('.marks_block a:nth-of-type(2)').css('z-index', '10');
-
-				});
-			}
-		});
-	</script>
-
+	<div id="overlay2"></div>
 	<style type="text/css">
-		@media (min-width: 560px) and (max-width: 768px) {
+		@media (min-width: 560px) and (max-width: 1023px) {
 			body {
 				padding-top: 0;
 			}
@@ -103,84 +78,158 @@
 		}
 	</style>
 
-	<section class="panel home" data-section-name="engines" style="background-color: rgba(0,0,0,0.8);">
-		<div class="sect_cnt" style="text-align: center;">
-			<div class="step2_block">Шаг 2</div>
-			<ul class="glow_ind2">
+	<section class="panel prod" style="background-color: rgba(0,0,0,0.8);">
+		<div class="sect_cnt">
+			<div class="step3_block">Шаг 4</div>
+			<ul class="glow_ind4">
 				<li></li>
 				<li></li>
 				<li></li>
 				<li></li>
 			</ul>
-			<div class="st2_choose_btn">
-				<p>Подобрать
-					<a href="index.html" title="К первому шагу ">
+
+			<div class="st4_choose_btn">
+				<p>
+					<a href="http://motor/" title="К первому шагу">
 						<span class="st2_eng trans">Двс</span>
 						<span class="st2_comb trans">Двс + кпп</span>
 						<span class="st2_kpp trans">Кпп</span>
 					</a>
+
 					<script type="text/javascript">
 						$('.st2_eng').show();
 					</script>
-					для автомобиля марки
+
+					для <a href="http://motor/step2/?select=28" title="Ко второму шагу">Nissan</a> модели <a
+						href="http://motor/product_model/nissan/?select=28" title="К третьему шагу">Qashqai</a>
 				</p>
 			</div>
-			<div class="marks_block">
-				<a class="links_mark" href="step3.html#acura">
-					<div class="mark_item trans"><img class="trans" src="uploads/2015/07/acura.png" alt="">
+
+			<div class="tovimage">
+				<img src="./step4_files/tovimg-min.png" alt=""> </div>
+
+			<div class="tovdesc">
+				<div class="all_price">
+					<p>Цена:</p>
+					<span class="oldprice">150 000 руб.</span> <br>
+					<span class="newprice">от 25 000 руб.</span>
+				</div>
+
+				<div class="deliv">
+					<p>Доставка</p>
+					<span>10-20 рабочих дней</span>
+				</div>
+				<br>
+				<div class="sklad">
+					<p>Осталось на складе</p>
+					<ul>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+
+				<div class="btn_block">
+					<a href="http://motor/product/dvs-dlya-nissan-modeli-qashqai/?select=28#" id="openform1"
+						class="feedback trans open_modal">Заявка</a>
+					<a href="http://motor/product/dvs-dlya-nissan-modeli-qashqai/?select=28#" id="openform4"
+						class="save_pr trans open_modal">Сохранить</a>
+				</div>
+
+				<div id="form1" class="modal_div">
+					<span id="close1" class="modal_close_in"><img src="./step4_files/closein.png" alt=""></span>
+					<div class="face">
+						<img src="./step4_files/face.png" alt="">
+						<p>Валуев Сергей</p>
+						<span>Главный специалист</span>
 					</div>
-				</a><a class="links_mark" href="step3.html#honda">
-					<div class="mark_item trans"><img class="trans" src="uploads/2015/07/honda.png" alt="">
+					<div class="fields_center">
+						<label><input class="f_name" type="text" placeholder="Ваше имя (*)"></label>
+						<label><input class="f_phone" type="text" placeholder="Ваш телефон (*)"></label>
+						<label><input class="f_email" type="text" placeholder="Ваш VIN-номер"></label>
+						<br>
+						<form id="koform">
+							<input class="knd_opt" id="ko1" name="ko1" value="1" type="checkbox"><label for="ko1"
+								class="chckd">Требуется <span>установка</span></label>
+						</form>
+						<div class="btorient" style="text-align:left;">
+							<a class="sbm_btt trans"
+								href="http://motor/product/dvs-dlya-nissan-modeli-qashqai/?select=28#">Отправить заявку
+								на подбор</a>
+							<div class="thnx">Ваша заявка успешно отправлена!</div>
+						</div>
 					</div>
-				</a><a class="links_mark" href="step3.html#infiniti">
-					<div class="mark_item trans"><img class="trans" src="uploads/2015/07/infin.png" alt="">
+					<span id="close2" class="modal_close_in"><img src="./step4_files/close2.png" alt=""></span>
+				</div>
+
+
+				<div id="form4" class="modal_div">
+					<div class="save_block">
+						<ul class="svensoft-social-buttons-list-35 share-buttons-list">
+							<li class="svensoft-social-share-info">
+								<div class="title">ДВС для Nissan модели Qashqai</div>
+								<div class="image-share">
+									http://motors-russia.ru/wp-content/uploads/2015/07/qash-150x150.png</div>
+								<div class="excerpt"></div>
+							</li>
+							<li><a target="_blank"
+									href="http://www.facebook.com/sharer.php?s=100&amp;url=http:///product/dvs-dlya-nissan-modeli-qashqai/?select=28"
+									class="facebook-social" title="Поделиться в Facebook">Facebook</a></li>
+							<li><a target="_blank"
+									href="http://twitter.com/share?url=http:///product/dvs-dlya-nissan-modeli-qashqai/?select=28"
+									class="twitter-social" title="Поделиться в Twitter">Twitter</a></li>
+							<li><a target="_blank"
+									href="http://vkontakte.ru/share.php?url=http:///product/dvs-dlya-nissan-modeli-qashqai/?select=28"
+									class="vkontakte-social" title="Поделиться ВКонтакте">ВКонтакте</a></li>
+							<li><a target="_blank"
+									href="http://www.odnoklassniki.ru/dk?st.cmd=addShare&amp;st.s=1&amp;st._surl=http:///product/dvs-dlya-nissan-modeli-qashqai/?select=28"
+									class="odnoklassniki-social" title="Поделиться в Одноклассники">Одноклассники</a>
+							</li>
+							<li><a target="_blank"
+									href="https://plus.google.com/share?url=http:///product/dvs-dlya-nissan-modeli-qashqai/?select=28"
+									class="googleplus-social" title="Поделиться в Google+">Google+</a></li>
+							<li><a href="mailto:?subject=%D0%94%D0%92%D0%A1%20%D0%B4%D0%BB%D1%8F%20Nissan%20%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D0%B8%20Qashqai&amp;body=http://motors-russia.ru/product/dvs-dlya-nissan-modeli-qashqai/"
+									class="toemail" title="Отправить ссылку на E-mail"></a></li>
+							<li><a href="javascript:window.print(); void 0;" class="toprint" title="Распечатать"></a>
+							</li>
+						</ul>
 					</div>
-				</a><a class="links_mark" href="step3.html#lexus">
-					<div class="mark_item trans"><img class="trans" src="uploads/2015/07/lexus.png" alt="">
-					</div>
-				</a><a class="links_mark" href="step3.html#mazda">
-					<div class="mark_item trans"><img class="trans" src="uploads/2015/07/mazda.png" alt="">
-					</div>
-				</a><a class="links_mark" href="step3.html#mitsubishi">
-					<div class="mark_item trans"><img class="trans" src="uploads/2015/07/mits.png" alt="">
-					</div>
-				</a><a class="links_mark" href="step3.html#nissan">
-					<div class="mark_item trans"><img class="trans" src="uploads/2015/07/niss.png" alt="">
-					</div>
-				</a><a class="links_mark" href="step3.html#subaru">
-					<div class="mark_item trans"><img class="trans" src="uploads/2015/07/subaru.png" alt="">
-					</div>
-				</a><a class="links_mark" href="step3.html#suzuki">
-					<div class="mark_item trans"><img class="trans" src="uploads/2015/07/suz.png" alt="">
-					</div>
-				</a><a class="links_mark" href="step3.html#toyota">
-					<div class="mark_item trans"><img class="trans" src="uploads/2015/07/toy.png" alt="">
-					</div>
-				</a> </div>
+					<span id="close4" class="modal_close_in">Сохранить</span>
+				</div>
+
+			</div>
 		</div>
 	</section>
 
 
 
-
 	<div id="mod_fos" class="modal_div">
-		<span class="modal_close"><img class="logo" src="img/closein.png" alt=""></span>
+		<span class="modal_close"><img class="logo" src="./step4_files/closein.png" alt=""></span>
 		<div class="face">
-			<img src="img/face.png" alt="">
+			<img src="./step4_files/face.png" alt="">
 			<p>Валуев Сергей</p>
 			<span>Главный специалист</span>
 		</div>
-		<div class='fields_center'>
-			<label><input class='f_name' type="text" placeholder='Ваше имя (*)' /></label>
-			<label><input class='f_phone' type="text" placeholder='Ваш телефон (*)' /></label>
-			<label><input class='f_email' type="text" placeholder='Ваш VIN-номер' /></label>
+		<div class="fields_center">
+			<label><input class="f_name" type="text" placeholder="Ваше имя (*)"></label>
+			<label><input class="f_phone" type="text" placeholder="Ваш телефон (*)"></label>
+			<label><input class="f_email" type="text" placeholder="Ваш VIN-номер"></label>
 			<br>
 			<form id="koform">
 				<input class="knd_opt" id="ko1" name="ko1" value="1" type="checkbox"><label for="ko1"
 					class="chckd">Требуется <span>установка</span></label>
 			</form>
-			<div style='text-align:left;'>
-				<a class='sbm_btt trans' href='step2%3Fselect=28.html#'>Отправить заявку на подбор</a>
+			<div style="text-align:left;">
+				<a class="sbm_btt trans"
+					href="http://motor/product/dvs-dlya-nissan-modeli-qashqai/?select=28#">Отправить заявку на
+					подбор</a>
 				<div class="thnx">Ваша заявка успешно отправлена!</div>
 			</div>
 		</div>

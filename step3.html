@@ -27,7 +27,7 @@
 	<base href="https://motors-russia.com/">
 </head>
 
-<body class="page page-id-28 page-template page-template-page-step2 page-template-page-step2-php">
+<body class="archive tax-product_model term-nissan term-26">
 	<header class="scene_element scene_element--fadein">
 		<div class="head_cnt">
 	
@@ -65,32 +65,31 @@
 		</div>
 	  </header>
 	<div class="mmm-menu"></div>
-	<script type="text/javascript" src="js/cookies.js"></script>
+	<script type="text/javascript" src="uploads/2015/07/cookies.js.Без названия"></script>
 	<script type="text/javascript">
 		jQuery(document).ready(function ($) {
 
 			var width = $(window).width();
 			if (width > 480) {
-				if ($.cookie("step2") == null) {
-					$('.marks_block a:nth-of-type(2)').css('z-index', '10000');
-					$('.marks_block a').eq(1).addClass('rightmark').prepend('<div class="myglow"></div>');
+
+				if ($.cookie("step3") == null) {
+					$('.models_block a:nth-of-type(5)').css('z-index', '10000');
+					$('.models_block a').eq(4).addClass('rightmark').prepend('<div class="myglow"></div>');
 					$('#overlay').fadeIn();
-					$.cookie("step2", "itsshown", {
+					$.cookie("step3", "itsshown", {
 						path: '/'
 					});
 				}
 
 				$('#overlay').on('click', function () {
-					$('.marks_block a:nth-of-type(2).rightmark:after').fadeOut();
+					$('.models_block a:nth-of-type(7).rightmark:after').fadeOut();
 					$('.myglow').fadeOut();
-					$('.marks_block a').eq(1).removeClass('rightmark').css('z-index', '10');
-					$('.marks_block a:nth-of-type(2)').css('z-index', '10');
+					$('.models_block a').eq(4).removeClass('rightmark').css('z-index', '10');
 
 				});
 			}
 		});
 	</script>
-
 	<style type="text/css">
 		@media (min-width: 560px) and (max-width: 768px) {
 			body {
@@ -102,19 +101,19 @@
 			}
 		}
 	</style>
-
-	<section class="panel home" data-section-name="engines" style="background-color: rgba(0,0,0,0.8);">
+	<section class="panel home" style="background-color: rgba(0,0,0,0.8);">
 		<div class="sect_cnt" style="text-align: center;">
-			<div class="step2_block">Шаг 2</div>
-			<ul class="glow_ind2">
+			<div class="step3_block">Шаг 3</div>
+			<ul class="glow_ind3">
 				<li></li>
 				<li></li>
 				<li></li>
 				<li></li>
 			</ul>
-			<div class="st2_choose_btn">
+
+			<div class="st3_choose_btn">
 				<p>Подобрать
-					<a href="index.html" title="К первому шагу ">
+					<a href="http://motor/" title="К первому шагу">
 						<span class="st2_eng trans">Двс</span>
 						<span class="st2_comb trans">Двс + кпп</span>
 						<span class="st2_kpp trans">Кпп</span>
@@ -122,41 +121,54 @@
 					<script type="text/javascript">
 						$('.st2_eng').show();
 					</script>
-					для автомобиля марки
+					для автомобиля марки <a href="http://motor/step2/?select=28" title="Ко второму шагу">Nissan</a>
+					модели
 				</p>
 			</div>
-			<div class="marks_block">
-				<a class="links_mark" href="step3.html#acura">
-					<div class="mark_item trans"><img class="trans" src="uploads/2015/07/acura.png" alt="">
-					</div>
-				</a><a class="links_mark" href="step3.html#honda">
-					<div class="mark_item trans"><img class="trans" src="uploads/2015/07/honda.png" alt="">
-					</div>
-				</a><a class="links_mark" href="step3.html#infiniti">
-					<div class="mark_item trans"><img class="trans" src="uploads/2015/07/infin.png" alt="">
-					</div>
-				</a><a class="links_mark" href="step3.html#lexus">
-					<div class="mark_item trans"><img class="trans" src="uploads/2015/07/lexus.png" alt="">
-					</div>
-				</a><a class="links_mark" href="step3.html#mazda">
-					<div class="mark_item trans"><img class="trans" src="uploads/2015/07/mazda.png" alt="">
-					</div>
-				</a><a class="links_mark" href="step3.html#mitsubishi">
-					<div class="mark_item trans"><img class="trans" src="uploads/2015/07/mits.png" alt="">
-					</div>
-				</a><a class="links_mark" href="step3.html#nissan">
-					<div class="mark_item trans"><img class="trans" src="uploads/2015/07/niss.png" alt="">
-					</div>
-				</a><a class="links_mark" href="step3.html#subaru">
-					<div class="mark_item trans"><img class="trans" src="uploads/2015/07/subaru.png" alt="">
-					</div>
-				</a><a class="links_mark" href="step3.html#suzuki">
-					<div class="mark_item trans"><img class="trans" src="uploads/2015/07/suz.png" alt="">
-					</div>
-				</a><a class="links_mark" href="step3.html#toyota">
-					<div class="mark_item trans"><img class="trans" src="uploads/2015/07/toy.png" alt="">
-					</div>
+
+			<div class="models_block">
+
+				<a class="link_model" href="step4.html#dvs-dlya-nissan-almera">
+					<div class="model_th trans"><img width="240" height="150" src="uploads/2015/10/almera-min-240x150.png"
+							class="attachment-post-thumbnail wp-post-image" alt="almera-min"></div>
+					<div class="mod_name">Nissan Almera</div>
+				</a>
+				<a class="link_model" href="step4.html#dvs-dlya-nissan-gt-r">
+					<div class="model_th trans"><img width="240" height="150" src="uploads/2015/10/gtr-min-240x150.png"
+							class="attachment-post-thumbnail wp-post-image" alt="gtr-min"></div>
+					<div class="mod_name">Nissan GT-R</div>
+				</a>
+				<a class="link_model" href="step4.html#dvs-dlya-nissan-modeli-juke">
+					<div class="model_th trans"><img width="239" height="150" src="uploads/2015/07/juke-239x150.png"
+							class="attachment-post-thumbnail wp-post-image" alt="juke"></div>
+					<div class="mod_name">Nissan Juke</div>
+				</a>
+				<a class="link_model" href="step4.html#dvs-dlya-nissan-modeli-qashqai">
+					<div class="model_th trans"><img width="239" height="150" src="uploads/2015/07/qash-239x150.png"
+							class="attachment-post-thumbnail wp-post-image" alt="qash"></div>
+					<div class="mod_name">Nissan Qashqai</div>
+				</a>
+				<a class="link_model" href="step4.html#dvs-dlya-nissan-navara">
+					<div class="model_th trans"><img width="239" height="150" src="uploads/2015/07/navara-239x150.png"
+							class="attachment-post-thumbnail wp-post-image" alt="navara"></div>
+					<div class="mod_name">Nissan Navara</div>
+				</a>
+				<a class="link_model" href="step4.html#dvs-dlya-nissan-teana">
+					<div class="model_th trans"><img width="239" height="150" src="uploads/2015/07/teana-239x150.png"
+							class="attachment-post-thumbnail wp-post-image" alt="teana"></div>
+					<div class="mod_name">Nissan Teana</div>
+				</a>
+				<a class="link_model" href="step4.html#dvs-dlya-nissan-tiida">
+					<div class="model_th trans"><img width="239" height="150" src="uploads/2015/07/tiida-239x150.png"
+							class="attachment-post-thumbnail wp-post-image" alt="tiida"></div>
+					<div class="mod_name">Nissan Tiida</div>
+				</a>
+				<a class="link_model" href="step4.html#dvs-dlya-nissan-x-trail">
+					<div class="model_th trans"><img width="240" height="150" src="uploads/2015/10/xtrail-min-240x150.png"
+							class="attachment-post-thumbnail wp-post-image" alt="xtrail-min"></div>
+					<div class="mod_name">Nissan X-trail</div>
 				</a> </div>
+
 		</div>
 	</section>
 
@@ -164,23 +176,24 @@
 
 
 	<div id="mod_fos" class="modal_div">
-		<span class="modal_close"><img class="logo" src="img/closein.png" alt=""></span>
+		<span class="modal_close"><img class="logo" src="uploads/2015/07/closein.png" alt=""></span>
 		<div class="face">
-			<img src="img/face.png" alt="">
+			<img src="uploads/2015/07/face.png" alt="">
 			<p>Валуев Сергей</p>
 			<span>Главный специалист</span>
 		</div>
-		<div class='fields_center'>
-			<label><input class='f_name' type="text" placeholder='Ваше имя (*)' /></label>
-			<label><input class='f_phone' type="text" placeholder='Ваш телефон (*)' /></label>
-			<label><input class='f_email' type="text" placeholder='Ваш VIN-номер' /></label>
+		<div class="fields_center">
+			<label><input class="f_name" type="text" placeholder="Ваше имя (*)"></label>
+			<label><input class="f_phone" type="text" placeholder="Ваш телефон (*)"></label>
+			<label><input class="f_email" type="text" placeholder="Ваш VIN-номер"></label>
 			<br>
 			<form id="koform">
 				<input class="knd_opt" id="ko1" name="ko1" value="1" type="checkbox"><label for="ko1"
 					class="chckd">Требуется <span>установка</span></label>
 			</form>
-			<div style='text-align:left;'>
-				<a class='sbm_btt trans' href='step2%3Fselect=28.html#'>Отправить заявку на подбор</a>
+			<div style="text-align:left;">
+				<a class="sbm_btt trans" href="http://motor/product_model/nissan/?select=28#">Отправить заявку на
+					подбор</a>
 				<div class="thnx">Ваша заявка успешно отправлена!</div>
 			</div>
 		</div>
